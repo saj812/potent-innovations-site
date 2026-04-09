@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy - Picave | Potent Innovations</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .info-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid rgba(201,168,76,0.5);
+      border-radius: 10px;
+      padding: 16px 20px;
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    .prose {
+      position: relative;
+      z-index: 1;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 32px 80px;
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+    }
+
+    .prose-section h2 {
+      font-family: 'Cinzel', serif;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+
+    .prose-section p,
+    .prose-section li { font-size: 14px; color: var(--muted); line-height: 1.8; }
+
+    .prose-section ul { padding-left: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; margin-top: 10px; }
+
+    .prose-section ul li { display: flex; gap: 10px; align-items: flex-start; }
+
+    .prose-section ul li::before { content: '/'; color: var(--gold); flex-shrink: 0; margin-top: 2px; font-weight: 700; font-size: 11px; }
+
+    .prose-section p + p { margin-top: 10px; }
+    .prose-section a { color: var(--gold); text-decoration: none; }
+    .prose-section a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-tabs">
+      <a href="index.html">Home</a>
+      <a href="picave.html">Picave</a>
+      <a href="privacy.html" class="active">Privacy Policy</a>
+      <a href="support.html">Support</a>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <span class="eyebrow">Picave</span>
+    <h1>Privacy Policy</h1>
+    <p>Last updated: April 2026</p>
+  </div>
+
+  <div class="prose">
+
+    <div class="info-box">
+      Picave is a solo developer project that collects minimal user data to operate its banknote scanning and collection tracking features.
+    </div>
+
+    <div class="prose-section">
+      <h2>Data Collected</h2>
+      <ul>
+        <li><strong>Account information:</strong> Email address and password, if you create an account via Supabase Auth.</li>
+        <li><strong>App usage data:</strong> Banknote serial numbers you scan or enter, collection and wishlist entries, and subscription status through RevenueCat.</li>
+        <li><strong>Camera:</strong> The camera is used solely to scan banknote serial numbers. Photos are processed on-device and immediately discarded. They are never uploaded or stored.</li>
+      </ul>
+    </div>
+
+    <div class="prose-section">
+      <h2>How Your Data Is Used</h2>
+      <ul>
+        <li>To enable serial number lookup</li>
+        <li>To track your collection entries</li>
+        <li>To send notifications about wishlisted items</li>
+        <li>To manage your subscription status</li>
+      </ul>
+    </div>
+
+    <div class="prose-section">
+      <h2>Third-Party Services</h2>
+      <ul>
+        <li><strong>Supabase</strong> handles database and authentication.</li>
+        <li><strong>RevenueCat</strong> manages subscriptions and in-app purchases.</li>
+        <li><strong>Firebase</strong> provides push notifications on Android.</li>
+      </ul>
+    </div>
+
+    <div class="prose-section">
+      <h2>Data Security</h2>
+      <p>Your data is stored securely on Supabase servers.</p>
+    </div>
+
+    <div class="prose-section">
+      <h2>Account Deletion</h2>
+      <p>To request deletion of your account and all associated data, email <a href="mailto:picave@potentinnovations.com">picave@potentinnovations.com</a> with the subject line <strong>Account Deletion Request</strong>. Include the email address associated with your account in the message body. Requests are processed within 21 business days.</p>
+      <p>The following data will be deleted:</p>
+      <ul>
+        <li>Account credentials</li>
+        <li>Saved collection</li>
+        <li>Wishlist</li>
+        <li>Any photos uploaded</li>
+      </ul>
+      <p>Anonymous, non-identifiable usage data may be retained for up to 30 days for security and fraud prevention purposes.</p>
+    </div>
+
+    <div class="prose-section">
+      <h2>Contact</h2>
+      <p>For any privacy-related questions, reach out at <a href="mailto:picave@potentinnovations.com">picave@potentinnovations.com</a>.</p>
+    </div>
+
+  </div>
+
+  <div class="footer-wrap">
+    <footer>
+      <p>&copy; 2026 Potent Innovations. All rights reserved.</p>
+      <div class="footer-nav">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="support.html">Support</a>
+      </div>
+    </footer>
+  </div>
+
+</body>
+</html>

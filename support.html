@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support - Picave | Potent Innovations</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .content {
+      position: relative;
+      z-index: 1;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 32px 80px;
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+    }
+
+    .contact-card {
+      background: var(--surface);
+      border: 1px solid rgba(201,168,76,0.25);
+      border-radius: 16px;
+      padding: 32px;
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .contact-card h2 {
+      font-family: 'Cinzel', serif;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .contact-card p { font-size: 14px; color: var(--muted); line-height: 1.65; margin-bottom: 20px; }
+
+    .faq-block h2 {
+      font-family: 'Cinzel', serif;
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .faq-block > p { font-size: 14px; color: var(--muted); margin-bottom: 24px; }
+
+    .faq-list { display: flex; flex-direction: column; gap: 2px; }
+
+    details {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color 0.15s;
+    }
+
+    details[open] { border-color: rgba(201,168,76,0.3); }
+
+    summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 22px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      cursor: pointer;
+      list-style: none;
+      user-select: none;
+      gap: 16px;
+    }
+
+    summary::-webkit-details-marker { display: none; }
+
+    .summary-icon {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+      color: var(--muted);
+      transition: border-color 0.15s, color 0.15s, transform 0.2s;
+    }
+
+    details[open] .summary-icon { border-color: var(--gold); color: var(--gold); transform: rotate(45deg); }
+
+    .faq-body { padding: 0 22px 18px; font-size: 13px; color: var(--muted); line-height: 1.8; }
+
+    .faq-body a { color: var(--gold); text-decoration: none; }
+    .faq-body a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-tabs">
+      <a href="index.html">Home</a>
+      <a href="picave.html">Picave</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="support.html" class="active">Support</a>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <span class="eyebrow">Picave</span>
+    <h1>Support</h1>
+    <p>Need help with Picave? Check the FAQs below or get in touch. Responses are typically within a couple of days.</p>
+  </div>
+
+  <div class="content">
+
+    <div class="contact-card">
+      <div>
+        <h2>Get in Touch</h2>
+        <p>Send an email and expect a reply within a couple of days.</p>
+        <a class="btn" href="mailto:picave@potentinnovations.com">picave@potentinnovations.com</a>
+      </div>
+    </div>
+
+    <div class="faq-block">
+      <h2>Frequently Asked Questions</h2>
+      <p>Answers to common questions about using Picave.</p>
+
+      <div class="faq-list">
+
+        <details>
+          <summary>
+            How do I scan a banknote?
+            <span class="summary-icon">+</span>
+          </summary>
+          <div class="faq-body">
+            Open the Scanner tab and point your camera at the serial number on your banknote. Make sure the serial number is clearly visible and well lit.
+          </div>
+        </details>
+
+        <details>
+          <summary>
+            Why wasn't my banknote identified?
+            <span class="summary-icon">+</span>
+          </summary>
+          <div class="faq-body">
+            Ensure the serial number is in focus and not obscured. If the note is not in the database, it may be an older or uncommon issue. You can manually select the denomination if it is not detected automatically.
+          </div>
+        </details>
+
+        <details>
+          <summary>
+            How do I cancel my Pro subscription?
+            <span class="summary-icon">+</span>
+          </summary>
+          <div class="faq-body">
+            Subscriptions are managed through the App Store or Google Play. Go to Settings, then Manage Subscriptions on your device to cancel. Pro access continues until the end of the current billing period.
+          </div>
+        </details>
+
+        <details>
+          <summary>
+            How do I restore my purchases after reinstalling?
+            <span class="summary-icon">+</span>
+          </summary>
+          <div class="faq-body">
+            Go to Settings, then Restore Purchases inside the app.
+          </div>
+        </details>
+
+        <details>
+          <summary>
+            How do I delete my account?
+            <span class="summary-icon">+</span>
+          </summary>
+          <div class="faq-body">
+            From within the app, go to Settings, then Delete Account. This will permanently delete your account and all associated data. Alternatively, email <a href="mailto:picave@potentinnovations.com">picave@potentinnovations.com</a> and it will be handled promptly.
+          </div>
+        </details>
+
+        <details>
+          <summary>
+            I found a bug or have a suggestion. How do I report it?
+            <span class="summary-icon">+</span>
+          </summary>
+          <div class="faq-body">
+            Email <a href="mailto:picave@potentinnovations.com">picave@potentinnovations.com</a> with as much detail as possible, including your device model, iOS/Android version, and steps to reproduce for bugs. Feature suggestions are always welcome.
+          </div>
+        </details>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-wrap">
+    <footer>
+      <p>&copy; 2026 Potent Innovations. All rights reserved.</p>
+      <div class="footer-nav">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="support.html">Support</a>
+      </div>
+    </footer>
+  </div>
+
+</body>
+</html>
