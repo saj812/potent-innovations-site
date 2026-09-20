@@ -60,11 +60,11 @@ body::before {
 }
 
 /* TEXTURE
-   A tiling image over the background, under everything else. To switch it on,
-   put the file in this folder and remove the comment markers around the rule.
-   Wants a seamless tile, PNG or WebP, 512px square, under about 150KB. Adjust
-   opacity for strength: the higher it goes, the more it competes with the text.
-
+   Leather grain over the whole background, under the content. The tile is
+   generated in code (a 512px seamless tile of spectral noise) rather than
+   drawn, because the edges have to line up exactly or the repeat shows as a
+   grid. Soft-light means the grey tile only lightens and darkens the green
+   underneath instead of greying it out. Raise the opacity for more grain. */
 body::after {
   content: '';
   position: fixed;
@@ -72,12 +72,11 @@ body::after {
   background-image: url('texture.png');
   background-repeat: repeat;
   background-size: 512px 512px;
-  opacity: 0.06;
+  opacity: 0.5;
   mix-blend-mode: soft-light;
   pointer-events: none;
   z-index: 0;
 }
-*/
 
 /* NAV */
 nav {
