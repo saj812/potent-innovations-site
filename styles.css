@@ -11,9 +11,10 @@
   --border:   #273d2c;
   --gold:     #c9a84c;
   --text:     #ede0c4;
-  /* The app's muted green. About 5.4:1 on the cards, so it clears the 4.5:1
-     minimum for body text. */
-  --muted:    #7a9080;
+  /* The app's muted green, lifted a little: on the lightest part of the page
+     background the app's own #7a9080 fell to 3.9:1, under the 4.5:1 minimum
+     for body text. This measures 5.1:1 there and 7.1:1 on a card. */
+  --muted:    #8fa596;
   --nav-h:    64px;
   /* Headings. Barlow Condensed replaced Cinzel, whose Roman capitals read as
      formal and dated beside the app, which now uses each device's own font. */
@@ -21,7 +22,7 @@
 }
 
 body {
-  background: radial-gradient(ellipse 120% 120% at 50% 30%, #0a1710 0%, #060f09 25%, #07250f 60%, #073314 100%);
+  background: radial-gradient(ellipse 120% 120% at 50% 26%, #1b3421 0%, #14291a 30%, #0e2012 65%, #091708 100%);
   background-attachment: fixed;
   color: var(--text);
   color-scheme: dark;
@@ -51,10 +52,10 @@ body::before {
   position: fixed;
   inset: 0;
   background:
-    radial-gradient(ellipse 60% 60% at 0% 100%, rgba(10,62,26,0.5) 0%, transparent 60%),
-    radial-gradient(ellipse 60% 60% at 100% 100%, rgba(10,62,26,0.5) 0%, transparent 60%),
-    radial-gradient(ellipse 40% 40% at 0% 0%, rgba(10,62,26,0.3) 0%, transparent 50%),
-    radial-gradient(ellipse 40% 40% at 100% 0%, rgba(10,62,26,0.3) 0%, transparent 50%);
+    radial-gradient(ellipse 60% 60% at 0% 100%, rgba(24,84,40,0.42) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 60% at 100% 100%, rgba(24,84,40,0.42) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 40% at 0% 0%, rgba(24,84,40,0.26) 0%, transparent 50%),
+    radial-gradient(ellipse 40% 40% at 100% 0%, rgba(24,84,40,0.26) 0%, transparent 50%);
   pointer-events: none;
   z-index: 0;
 }
@@ -72,7 +73,7 @@ body::after {
   background-image: url('texture.png');
   background-repeat: repeat;
   background-size: 512px 512px;
-  opacity: 0.5;
+  opacity: 0.85;
   mix-blend-mode: soft-light;
   pointer-events: none;
   z-index: 0;
