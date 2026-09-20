@@ -3,15 +3,17 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg:       #0c0a14;
-  --surface:  #131020;
-  --surface2: #16122a;
-  --border:   #2a2040;
+  /* The app's own palette, from its global.css, so the site and the app read as
+     one product. The gold and the cream text were already shared. */
+  --bg:       #050e07;
+  --surface:  #0a1510;
+  --surface2: #0f1e14;
+  --border:   #273d2c;
   --gold:     #c9a84c;
   --text:     #ede0c4;
-  /* Lightened from #7a7090, which sat at about 4.1:1 on the cards and failed
-     the 4.5:1 minimum for body text. This keeps the purple tone. */
-  --muted:    #a79fbe;
+  /* The app's muted green. About 5.4:1 on the cards, so it clears the 4.5:1
+     minimum for body text. */
+  --muted:    #7a9080;
   --nav-h:    64px;
   /* Headings. Barlow Condensed replaced Cinzel, whose Roman capitals read as
      formal and dated beside the app, which now uses each device's own font. */
@@ -19,7 +21,7 @@
 }
 
 body {
-  background: radial-gradient(ellipse 120% 120% at 50% 30%, #0f0c1c 0%, #0c0a1a 25%, #09103a 60%, #060c48 100%);
+  background: radial-gradient(ellipse 120% 120% at 50% 30%, #0a1710 0%, #060f09 25%, #07250f 60%, #073314 100%);
   background-attachment: fixed;
   color: var(--text);
   color-scheme: dark;
@@ -49,13 +51,33 @@ body::before {
   position: fixed;
   inset: 0;
   background:
-    radial-gradient(ellipse 60% 60% at 0% 100%, rgba(6,14,80,0.5) 0%, transparent 60%),
-    radial-gradient(ellipse 60% 60% at 100% 100%, rgba(6,14,80,0.5) 0%, transparent 60%),
-    radial-gradient(ellipse 40% 40% at 0% 0%, rgba(6,14,80,0.3) 0%, transparent 50%),
-    radial-gradient(ellipse 40% 40% at 100% 0%, rgba(6,14,80,0.3) 0%, transparent 50%);
+    radial-gradient(ellipse 60% 60% at 0% 100%, rgba(10,62,26,0.5) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 60% at 100% 100%, rgba(10,62,26,0.5) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 40% at 0% 0%, rgba(10,62,26,0.3) 0%, transparent 50%),
+    radial-gradient(ellipse 40% 40% at 100% 0%, rgba(10,62,26,0.3) 0%, transparent 50%);
   pointer-events: none;
   z-index: 0;
 }
+
+/* TEXTURE
+   A tiling image over the background, under everything else. To switch it on,
+   put the file in this folder and remove the comment markers around the rule.
+   Wants a seamless tile, PNG or WebP, 512px square, under about 150KB. Adjust
+   opacity for strength: the higher it goes, the more it competes with the text.
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url('texture.png');
+  background-repeat: repeat;
+  background-size: 512px 512px;
+  opacity: 0.06;
+  mix-blend-mode: soft-light;
+  pointer-events: none;
+  z-index: 0;
+}
+*/
 
 /* NAV */
 nav {
@@ -65,7 +87,7 @@ nav {
   /* Was a fixed height with tabs that could not wrap, so four tabs ran off the
      side of a narrow phone. */
   min-height: var(--nav-h);
-  background: rgba(12,10,20,0.92);
+  background: rgba(5,14,7,0.92);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);
   display: flex;
