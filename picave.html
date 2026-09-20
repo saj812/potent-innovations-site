@@ -56,7 +56,7 @@
 
     .features-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
       gap: 1px;
       background: var(--border);
       border: 1px solid var(--border);
@@ -76,7 +76,7 @@
       margin-bottom: 10px;
     }
 
-    .feature-card p { font-size: 13px; color: var(--muted); line-height: 1.7; }
+    .feature-card p { font-size: 14px; color: var(--muted); line-height: 1.7; }
 
     .tiers-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: 680px; }
 
@@ -108,8 +108,8 @@
     .tier-card h3 { font-family: 'Cinzel', serif; font-size: 22px; font-weight: 700; letter-spacing: 0.04em; margin-bottom: 20px; color: var(--text); }
 
     .tier-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-    .tier-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; color: var(--text); line-height: 1.5; }
-    .tier-list li::before { content: '/'; font-size: 11px; color: var(--gold); flex-shrink: 0; margin-top: 2px; font-weight: 700; }
+    .tier-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: var(--text); line-height: 1.6; }
+    .tier-list li::before { content: '2'; font-size: 16px; line-height: 1; color: rgba(201,168,76,0.9); flex-shrink: 0; margin-top: 3px; }
   </style>
 </head>
 <body>
@@ -117,7 +117,7 @@
   <nav>
     <div class="nav-tabs">
       <a href="index.html">Home</a>
-      <a href="picave.html" class="active">Picave</a>
+      <a href="picave.html" class="active" aria-current="page">Picave</a>
       <a href="privacy.html">Privacy Policy</a>
       <a href="support.html">Support</a>
     </div>

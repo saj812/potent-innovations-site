@@ -13,7 +13,7 @@
       border-left: 3px solid rgba(201,168,76,0.5);
       border-radius: 10px;
       padding: 16px 20px;
-      font-size: 14px;
+      font-size: 15px;
       color: var(--muted);
       line-height: 1.75;
     }
@@ -39,16 +39,16 @@
     }
 
     .prose-section p,
-    .prose-section li { font-size: 14px; color: var(--muted); line-height: 1.8; }
+    .prose-section li { font-size: 15px; color: var(--muted); line-height: 1.8; }
 
     .prose-section ul { padding-left: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; margin-top: 10px; }
 
     .prose-section ul li { display: flex; gap: 10px; align-items: flex-start; }
 
-    .prose-section ul li::before { content: '/'; color: var(--gold); flex-shrink: 0; margin-top: 2px; font-weight: 700; font-size: 11px; }
+    .prose-section ul li::before { content: '2'; color: rgba(201,168,76,0.9); flex-shrink: 0; margin-top: 1px; font-size: 16px; line-height: 1.5; }
 
     .prose-section p + p { margin-top: 10px; }
-    .prose-section a { color: var(--gold); text-decoration: none; }
+    .prose-section a { color: var(--gold); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
     .prose-section a:hover { text-decoration: underline; }
   </style>
 </head>
@@ -58,7 +58,7 @@
     <div class="nav-tabs">
       <a href="index.html">Home</a>
       <a href="picave.html">Picave</a>
-      <a href="privacy.html" class="active">Privacy Policy</a>
+      <a href="privacy.html" class="active" aria-current="page">Privacy Policy</a>
       <a href="support.html">Support</a>
     </div>
   </nav>
