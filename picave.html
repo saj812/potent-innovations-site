@@ -19,7 +19,7 @@
 
     .hero-eyebrow {
       display: inline-block;
-      font-family: 'Cinzel', serif;
+      font-family: var(--display);
       font-size: 11px;
       font-weight: 400;
       letter-spacing: 0.3em;
@@ -32,11 +32,11 @@
     }
 
     .hero h1 {
-      font-family: 'Cinzel', serif;
-      font-size: clamp(36px, 7vw, 68px);
+      font-family: var(--display);
+      font-size: clamp(38px, 7.4vw, 72px);
       font-weight: 700;
-      line-height: 1.1;
-      letter-spacing: 0.04em;
+      line-height: 1.08;
+      letter-spacing: 0.01em;
       margin-bottom: 20px;
       max-width: 760px;
       color: var(--text);
@@ -68,10 +68,10 @@
     .feature-card:hover { background: #1a1630; }
 
     .feature-card h3 {
-      font-family: 'Cinzel', serif;
-      font-size: 15px;
+      font-family: var(--display);
+      font-size: 16px;
       font-weight: 700;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.02em;
       color: var(--text);
       margin-bottom: 10px;
     }
@@ -92,7 +92,7 @@
 
     .tier-badge {
       display: inline-block;
-      font-family: 'Cinzel', serif;
+      font-family: var(--display);
       font-size: 10px;
       font-weight: 700;
       letter-spacing: 0.2em;
@@ -105,7 +105,7 @@
     .tier-card.free .tier-badge { background: rgba(237,224,196,0.06); color: var(--muted); border: 1px solid var(--border); }
     .tier-card.pro .tier-badge { background: rgba(201,168,76,0.12); color: var(--gold); border: 1px solid rgba(201,168,76,0.3); }
 
-    .tier-card h3 { font-family: 'Cinzel', serif; font-size: 22px; font-weight: 700; letter-spacing: 0.04em; margin-bottom: 20px; color: var(--text); }
+    .tier-card h3 { font-family: var(--display); font-size: 24px; font-weight: 700; letter-spacing: 0.01em; margin-bottom: 20px; color: var(--text); }
 
     .tier-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
     .tier-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: var(--text); line-height: 1.6; }
