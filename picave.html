@@ -119,6 +119,23 @@
 
     .tier-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
     .tier-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: var(--text); line-height: 1.6; }
+    .lifetime-card {
+      max-width: 680px; margin-top: 16px; padding: 24px 28px; border-radius: 16px;
+      background: var(--surface); border: 1px solid rgba(201,168,76,0.35);
+    }
+    .lifetime-card h3 { font-family: var(--display); font-size: 20px; font-weight: 700; letter-spacing: 0.01em; color: var(--gold); margin-bottom: 8px; }
+    .lifetime-card p { font-size: 14px; color: var(--text); line-height: 1.7; }
+
+    .country-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr)); gap: 12px; }
+    .country-card {
+      display: block; background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
+      padding: 18px 22px; color: var(--text); text-decoration: none;
+      font-family: var(--display); font-size: 20px; font-weight: 700; letter-spacing: 0.02em;
+      transition: border-color 0.2s, transform 0.15s;
+    }
+    .country-card::after { content: ' →'; color: var(--gold); }
+    .country-card:hover { border-color: rgba(201,168,76,0.35); transform: translateY(-2px); }
+
     .tier-list li::before { content: '\2022'; font-size: 16px; line-height: 1; color: rgba(201,168,76,0.9); flex-shrink: 0; margin-top: 3px; }
   </style>
 </head>
@@ -136,7 +153,7 @@
   <section class="hero">
     <span class="hero-eyebrow">Now Available</span>
     <h1>Collect Smarter.<br /><em>Know Your Notes.</em></h1>
-    <p>Picave is the companion for banknote collectors in Australia, New Zealand, the United Kingdom, Canada, the United States and the Eurozone. Identify notes, detect fancy serials, track your collection, and get notified when wishlist matches are found.</p>
+    <p>Picave is the companion for banknote collectors in Australia, New Zealand, the United Kingdom, Canada, the United States and the Eurozone. Identify notes, detect fancy serials, track your collection, and hear from other collectors when they find a note on your wishlist.</p>
     <div class="cta-group">
       <a href="https://apps.apple.com/app/id6760957578"><img class="store-badge" src="Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="Download on the App Store" /></a>
       <a href="https://play.google.com/store/apps/details?id=com.potentinnovations.picave"><img class="store-badge" src="GetItOnGooglePlay_Badge_Web_color_English.png" alt="Get it on Google Play" /></a>
@@ -148,32 +165,32 @@
   <section class="section">
     <p class="section-label">Features</p>
     <h2 class="section-title">Everything a Collector Needs</h2>
-    <p class="section-sub">From serial number lookup to wishlist matching, Picave covers every aspect of the hobby.</p>
+    <p class="section-sub">From identifying a note to finding the ones you are missing.</p>
 
     <div class="features-grid">
       <div class="feature-card">
         <h3>Serial Number Identification</h3>
-        <p>Instantly identify a banknote from six currencies by its serial number. Get denomination, series, signatures and issue date at a glance.</p>
+        <p>Identify a banknote from six currencies by its serial number and denomination: its year, series and signatures. Where one serial fits more than one note, the signatures are shown so you can pick yours.</p>
       </div>
       <div class="feature-card">
         <h3>Fancy Serial Detection</h3>
-        <p>Automatically detect radar, repeater, ladder, solid, and near-fancy serial patterns. The patterns that make a note truly special.</p>
+        <p>Detects radar, repeater, solid, ladder, binary and low serials, and near patterns one digit away. First and last prefixes, star notes and test notes are flagged too.</p>
       </div>
       <div class="feature-card">
         <h3>Condition Grading</h3>
-        <p>Step-by-step guided grading helps you accurately assess your note's condition using standard numismatic criteria.</p>
+        <p>Answer a short set of questions about your note's condition, with separate questions for paper and polymer, for a guide to its grade from Poor to Uncirculated. A guide, not an official grade.</p>
       </div>
       <div class="feature-card">
         <h3>Collection Management</h3>
-        <p>Build and track your personal collection with grades and notes. Everything synced securely so you never lose a record.</p>
+        <p>Keep your notes with their grades, linked to your account and synced. Photos stay on your device and can be backed up to a file.</p>
       </div>
       <div class="feature-card">
         <h3>Valuation Data</h3>
-        <p>Estimated values from collector-reported sales, plus what notes like yours are being listed for on eBay right now.</p>
+        <p>With Pro, eBay sales of the same note from the last 90 days, with the price and date of each. Similar notes sold are shown as a guide, and current listings when nothing has sold.</p>
       </div>
       <div class="feature-card">
-        <h3>Community Matching</h3>
-        <p>Add notes to your wishlist and get notified when another collector scans a match. Find the notes you need without the guesswork.</p>
+        <h3>Wishlist Matching</h3>
+        <p>Add an exact serial, a pattern such as any radar, or a sequence of digits to your wishlist. Every note another Picave user looks up is checked against the wishlists for its currency, and when one matches yours, they can let you know it has been found, with its grade and a link to their eBay listing if they are selling it.</p>
       </div>
     </div>
   </section>
@@ -183,19 +200,19 @@
   <section class="section">
     <p class="section-label">Plans</p>
     <h2 class="section-title">Free to Start. Pro to Go Further.</h2>
-    <p class="section-sub">Core collecting tools are free. Upgrade to Pro for valuations, community pricing data, and full collection sync.</p>
+    <p class="section-sub">Core collecting tools are free. Pro adds eBay sales data, an unlimited collection with photos, and runs. New users can try Pro free for 3 months.</p>
 
     <div class="tiers-grid">
       <div class="tier-card free">
         <span class="tier-badge">Free</span>
         <h3>Collector</h3>
         <ul class="tier-list">
-          <li>Serial number identification</li>
-          <li>Fancy serial pattern detection</li>
-          <li>Rarity classification</li>
+          <li>Live camera scanning</li>
+          <li>Identification and signature matching</li>
+          <li>Pattern detection and rarity classification</li>
           <li>Condition grading guide</li>
-          <li>Wishlist (unlimited notes)</li>
-          <li>Match notifications</li>
+          <li>A collection of up to 20 notes</li>
+          <li>Wishlist of up to 200 entries, with match notifications</li>
         </ul>
       </div>
       <div class="tier-card pro">
@@ -203,19 +220,49 @@
         <h3>Pro Collector</h3>
         <ul class="tier-list">
           <li>Everything in Free</li>
-          <li>Live eBay valuation data</li>
-          <li>Community sale prices</li>
-          <li>Collection tracking</li>
-          <li>Unlimited cloud sync</li>
+          <li>Recent eBay sales and current listings</li>
+          <li>An unlimited collection</li>
+          <li>Note photos and photo backup</li>
+          <li>Shareable note cards</li>
+          <li>Runs: consecutive notes grouped, their missing serials shown, and a run premium</li>
+          <li>A run's missing serials added to your wishlist in one tap, for other users' scans to find</li>
         </ul>
       </div>
+    </div>
+
+    <div class="lifetime-card">
+      <h3>Earn Lifetime Pro Access</h3>
+      <p>Provide missing data that can be verified and added to Picave's catalogue, and free lifetime Pro access is granted as a thank you. In the app, open Settings, then Submit Missing Data. Every submission is reviewed by hand.</p>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <section class="section">
+    <p class="section-label">Banknotes by country</p>
+    <h2 class="section-title">Serial Numbers Explained</h2>
+    <p class="section-sub">How serial numbers work in each currency Picave covers, and which ones collectors look for.</p>
+
+    <div class="country-grid">
+      <a class="country-card" href="australian-banknotes.html">Australia</a>
+      <a class="country-card" href="new-zealand-banknotes.html">New Zealand</a>
+      <a class="country-card" href="us-banknotes.html">United States</a>
+      <a class="country-card" href="canadian-banknotes.html">Canada</a>
+      <a class="country-card" href="uk-banknotes.html">United Kingdom</a>
+      <a class="country-card" href="euro-banknotes.html">Euro</a>
     </div>
   </section>
 
   <div class="footer-wrap">
     <footer>
       <p>&copy; 2026 Potent Innovations. All rights reserved.</p>
-      <div class="footer-nav">
+      <div class="footer-nav" style="flex-wrap: wrap">
+        <a href="australian-banknotes.html">Australia</a>
+        <a href="new-zealand-banknotes.html">New Zealand</a>
+        <a href="us-banknotes.html">US</a>
+        <a href="canadian-banknotes.html">Canada</a>
+        <a href="uk-banknotes.html">UK</a>
+        <a href="euro-banknotes.html">Euro</a>
         <a href="privacy.html">Privacy Policy</a>
         <a href="support.html">Support</a>
       </div>
